@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Contador</title>
+    <link rel="Website icon" type="png" 
+    href="image.png">
+    <style>
+        *{
+            margin-top: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            background-color: black;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        section{
+            background-color: rgba(255, 255, 255, .2);
+            padding: 20px;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        p{
+            font-size: 75px;
+            font: normal;
+        }
+
+        #n1{
+            border-radius: 7px;
+        }
+
+        #n2{
+            border-radius: 7px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p id="contador">0</p>
+        <button id="m1" onclick="mais()">Mais</button>
+        <button id="m2" onclick="menos()">Menos</button>
+    
+    
+    </section>
+    
+</body>
+
+<script>
+    let numero = 0
+    function menos(){
+        numero = numero - 1
+        render()
+    }
+
+    function mais(){
+        numero = numero + 1
+        render()
+    }
+
+    function render(){
+        const p = document.getElementById("contador")
+        p.innerText = numero
+    }
+    render()
+</script>
+</html>
