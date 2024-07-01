@@ -1,77 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Contador</title>
-    <link rel="Website icon" type="png" 
-    href="image.png">
+    <link rel="Website icon" type="png" href="calculator.png">
+    <link rel="stylesheet" href="style.css"> 
     <style>
-        *{
-            margin-top: 0;
-            box-sizing: border-box;
-        }
+    
 
-        body{
-            min-height: 100vh;
-            background-color: black;
-            color: white;
-            display: grid;
-            place-items: center;
-            font-family: "Roboto Condensed", sans-serif;
-        }
-
-        section{
-            background-color: rgba(255, 255, 255, .2);
-            padding: 20px;
-            border-radius: 7px;
-            text-align: center;
-        }
-
-        p{
-            font-size: 75px;
-            font: normal;
-        }
-
-        #n1{
-            border-radius: 7px;
-        }
-
-        #n2{
-            border-radius: 7px;
-        }
-
-
+            
+           
+        
     </style>
 </head>
+
 <body>
+    <img id="img1" src="conta.png" alt="contas">
     <section>
-        <h1>Contador</h1>
+        
+        <h1><strong>Contador</strong></h1>
         <p id="contador">0</p>
-        <button id="m1" onclick="mais()">Mais</button>
-        <button id="m2" onclick="menos()">Menos</button>
-    
-    
+        <button id="n1" onclick="mais()" title="Clique aqui para aumentar o contador"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+          </svg></button>
+        <button id="n2" onclick="menos()" title="Clique aqui para diminuir o contador"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
+          </svg></button>
+
+          <button id="reset" onclick="zero()" title="Clique aqui para voltar o contador a zero"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+          </svg></button>
+
+          <button id="btn" onclick="mais10()" title="Clique aqui para adicionar mais dez ao seu contador">+10</button>
+
+          <button id="btn1" onclick="menos10()" title="Clique aqui para diminuir dez do seu contador">-10</button>
+
+
     </section>
     
 </body>
-
+<script src="script.js"></script>
 <script>
+    
     let numero = 0
-    function menos(){
+    function menos() {
         numero = numero - 1
+        //if (numero < -10) numero = 0
         render()
     }
 
-    function mais(){
+    function mais() {
         numero = numero + 1
+        //if (numero > 10) numero = 10
         render()
     }
 
-    function render(){
+    function zero(){
+        numero = 0
+        render()
+    }
+
+    function render() {
         const p = document.getElementById("contador")
         p.innerText = numero
     }
+
+    function mais10(){
+        numero = numero + 10
+        render()
+    }
+
+    function menos10(){
+        numero = numero - 10
+        render()
+    }
+    
+
     render()
 </script>
+
 </html>

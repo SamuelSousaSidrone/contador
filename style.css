@@ -1,0 +1,98 @@
+* {
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-gray: rgb(79, 79, 79) --color-darkgray: rgb(169, 169, 169)
+}
+
+
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+section {
+    background-color: rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 75px;
+    font: normal;
+}
+
+#n1,
+#n2 {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 5px;
+
+}
+
+#n1 {
+    transition: 0.4s;
+}
+
+#n2 {
+    transition: 0.4s;
+}
+
+#n1:hover {
+    background-color: var(--color-gray);
+}
+
+#n2:hover {
+    background-color: var(--color-gray);
+}
+
+#reset {
+    background-color: black;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 5px;
+}
+
+#reset:hover {
+    background-color: var(--color-gray);
+}
+
+#btn {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 5px;
+    transition: 0.4s;
+}
+
+#btn:hover{
+    background-color: var(--color-gray);
+}
+
+
+#btn1{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 5px;
+    transition: 0.4s;
+}
+
+#btn1:hover{
+    background-color: var(--color-gray);
+}
+
